@@ -1,0 +1,77 @@
+@import url(style.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*estilos de servicios homero*/
+
+.redes-sociales {
+    & img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+
+.rrss {
+
+    & h5 {
+        padding-bottom: 30px;
+        color: #6200ff;
+    }
+
+    & .rrss-iconos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        height: 45px;
+
+        & img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+}
+
+.newsletter h5 {
+    padding-bottom: 30px;
+}
+
+.newsletter-caja {
+    display: flex;
+    padding-top: 50px;
+
+}
+
+.newsletter-caja input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0;
+    border: none;
+    background-color: var(--colorgrisfondo);
+}
+
+.newsletter-caja input:focus {
+    outline: 1px solid #6200ff;
+
+}
+
+.newsletter-caja button {
+    background-color: var(--colorblanco);
+    border-radius: 0;
+
+    & img {
+        width: 25px;
+        height: auto;
+
+    }
+}

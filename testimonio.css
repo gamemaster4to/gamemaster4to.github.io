@@ -1,0 +1,104 @@
+@import url(style.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.informacion-2 {
+    background-color: white;
+    background-position: center;
+}
+
+h4 {
+    text-align: center;
+    color: #6200ff;
+}
+
+.testimonio {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-top: 35px;
+}
+
+.testimonio-left {
+    width: 50%;
+    padding-right: 25px;
+}
+
+.testimonio-right {
+    width: 40%;
+    padding-left: 35px;
+}
+
+.testimonio-txt {
+    margin-bottom: 25px;
+}
+
+.testimonio-txt img {
+    width: 100px;
+}
+
+.testimonio-txt h3 {
+    font-size: 20px;
+    color: #6200ff;
+}
+
+.testimonio-txt p {
+    color: #6200ff;
+    font-size: 16px;
+}
+
+/*Ads*/
+
+.ads-skin-1,
+.ads-skin-2 {
+    position: fixed;
+    width: 160px;
+    top: 95px;
+}
+
+.ads-skin-1.hiden {
+    display: none;
+}
+
+
+.ads-skin-2.hiden {
+    display: none;
+}
+
+.ads-skin-1 {
+    left: 0px;
+}
+
+.ads-skin-2 {
+    right: 0px;
+}
+
+.bt-cerrar-ads-1,
+.bt-cerrar-ads-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    cursor: pointer;
+
+    & img {
+        width: 20px;
+        height: auto;
+        background-color: #0a39e6;
+        border-radius: 100px;
+        transition: transform 0.5s ease;
+    }
+
+    & img:hover {
+        background-color: #ff2f2c;
+        transform: scale(1.2);
+    }
+
+}

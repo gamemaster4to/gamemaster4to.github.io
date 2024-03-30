@@ -1,0 +1,57 @@
+@import url(style.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/*estilos de servicios homero*/
+
+#nosotros {
+    background-color: var(--colorblanco);
+}
+
+
+.ads-banner img {
+    width: 100%;
+    height: auto;
+}
+
+
+.nosotros-texto {
+    text-align: center;
+
+    & p {
+        padding-top: 30px;
+    }
+
+    & h2 {
+        color: #6200ff;
+    }
+
+    & h5 {
+        padding: 30px;
+        color: #6200ff;
+    }
+
+    & h6 {
+        padding-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+/*estilos de servicios mobile*/
+
+@media (max-width: 1023px) {
+    .imagenbonito img {
+        width: 100%;
+        height: auto;
+    }
+
+    .ads-banner img {
+        width: 100%;
+        height: auto;
+    }
+}
