@@ -1,77 +1,884 @@
 @import url(style.css);
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+/*estilos de servicios milene*/
+
+#services {
+    background-color: var(--colorazul);
 }
 
-/*estilos de servicios homero*/
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    color: #6200ff;
+    text-align: center;
 
-.redes-sociales {
-    & img {
-        width: 50%;
+    & p {
+        color: var(--colornegro);
+        padding: 0px;
+        gap: 0px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding-top: 10px;
+        text-align: center;
+
+    }
+
+}
+
+.services-container {
+    max-width: 1140px;
+    margin: 0px auto;
+    padding: 50px 0px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service h4 {
+    align-items: center;
+    gap: 50px;
+    padding-top: 20px;
+    text-align: center;
+
+}
+
+
+
+.service {
+    width: 95%;
+    margin: 0px;
+    gap: 25px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+
+
+}
+
+.service img {
+    width: 50%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.service img:hover {
+    transform: scale(1.2);
+}
+
+.service img {
+    width: 100%;
+    height: 300px;
+}
+
+.service-texto {
+    padding: 15px;
+    text-align: center;
+}
+
+
+.service-texto p {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.services-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px
+}
+
+
+
+/*Contactos*/
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--colorgrisfondo);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main::after {
+    top: 110px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.contactos-gamer {
+    margin-top: 10%;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem 0;
+}
+
+
+
+.contacto {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 20px;
+    margin-right: 24px;
+}
+
+.contactos-header {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.contactos-header h2 {
+    color: black;
+    font-weight: 0;
+    font-size: 40PX;
+    margin-bottom: 20px;
+}
+
+.contactos-header h2 span {
+    color: #6200ff;
+}
+
+.contactos-header p {
+    color: black;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacto-info {
+    width: 50%;
+}
+
+.contacto-info-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.contacto-info-icon {
+    height: 65px;
+    width: 65px;
+    background-color: var(--colorgrisfondo);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.contacto-info-icon i {
+    color: #6200ff(217, 57, 4);
+    font-size: 35px;
+    font-weight: bolder;
+    line-height: 65px;
+}
+
+.contacto-info-text {
+    margin-left: 20px;
+}
+
+.contacto-info-text h4 {
+    color: #6200ff(217, 57, 4);
+    font-size: 1.6em;
+    margin-bottom: 5px;
+    font-weight: 200;
+}
+
+.contacto-info-text p {
+    color: var(--colorgristexto2);
+    font-size: 1em;
+}
+
+.contacto-info-text a {
+    color: var(--colorgristexto2);
+    font-size: 1em;
+}
+
+.contacto-info-text a:hover {
+    font-weight: bold;
+}
+
+/*Contactos formulario*/
+
+.contacto-form {
+    background-color: white;
+    padding: 40px;
+    width: 45%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contacto-form h2 {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #9e66f8;
+}
+
+.contacto-form .input-box {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contacto-form .input-box input,
+.contacto-form .input-box textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 19px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #6200ff;
+    outline: none;
+    resize: none;
+}
+
+.contacto-form .input-box span {
+    left: 0;
+    padding: 5px 0;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: var(--colorblanco);
+}
+
+.contacto-form .input-box input:focus~span,
+.contacto-form .input-box textarea:focus~span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #6200ff;
+    transform: translateY(-20px);
+}
+
+textarea {
+    background-color: whitesmoke;
+}
+
+input {
+    background-color: whitesmoke;
+}
+
+.input-box .email {
+    font-weight: normal;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #6200ff;
+    cursor: pointer;
+    color: white;
+}
+
+.input-box .email:hover {
+    background-color: #6200ff;
+    cursor: pointer;
+    color: var(--colorgrisfondo);
+}
+
+.contacto-form .input-box input [type="submit"] {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    border: 8px solid whitesmoke;
+    transition: 0.5s;
+}
+
+.contacto-form .input-box input [type="submit"]:hover {
+    background-color: whitesmoke;
+    color: whitesmoke;
+
+}
+
+
+@media (max-width: 1025px) {
+
+    /* Header & nav */
+
+    header {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding: 0 50px;
+        background-color: black;
+    }
+
+    .logo img {
+        width: 180px;
         height: auto;
     }
-}
 
-
-.rrss {
-
-    & h5 {
-        padding-bottom: 30px;
-        color: #6200ff;
+    .nav-bar ul {
+        display: flex;
     }
 
-    & .rrss-iconos {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        height: 45px;
+    .nav-bar ul li a {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
 
-        & img {
-            height: 100%;
+
+    /* Footer */
+
+    .footer1 {
+        padding: 40px 40px;
+    }
+
+    .footer-link h4 {
+        font-size: 24px;
+        color: #6200ff;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer-link ul li p {
+        font-size: 20px;
+    }
+
+    .footer-link ul li a {
+        font-size: 20px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .social-link img {
+        width: 43px;
+        height: auto;
+    }
+
+    ::placeholder {
+        font-style: italic;
+    }
+
+    .newsletter .titulo {
+        padding-bottom: 10px;
+        color: #6200ff;
+        font-size: 24px;
+    }
+
+    .newsletter p {
+        color: white;
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    .newsletter-caja input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: gainsboro;
+    }
+
+    .newsletter-caja button {
+        padding: 8px 25px;
+        width: 100%;
+        height: 50px;
+    }
+
+    .footer-2 p,
+    a {
+        font-size: 15px;
+    }
+
+
+
+    @media (max-width: 769px) {
+
+        /* Header & nav */
+        .logo img {
             width: auto;
+            height: 55px;
+            display: flex;
+            align-items: center;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            padding: 0 40px;
+            background-color: black;
+        }
+
+        .hamburguesa {
+            display: block;
+            cursor: pointer;
+        }
+
+        .hamburguesa .line {
+            width: 30px;
+            height: 4px;
+            background: #6200ff;
+            margin: 6px 0px 6px 10cm;
+            border-radius: 2px;
+        }
+
+        .nav-bar {
+            height: 0;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            background: #6200ff;
+            transition: 1s;
+            overflow: hidden;
+        }
+
+        .nav-bar.active {
+            height: 400px;
+        }
+
+        .nav-bar.active a {
+            color: black;
+            font-weight: bold;
+        }
+
+        .nav-bar.active a:hover {
+            color: white;
+        }
+
+        .nav-bar ul {
+            display: block;
+            width: fit-content;
+            margin: 80px auto 0 auto;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .nav-bar.active ul li a {
+            color: white;
+            font-weight: normal;
+        }
+
+        .nav-bar.active ul {
+            opacity: 1;
+        }
+
+        .nav-bar ul li a {
+            color: white;
+            font-weight: normal;
+            margin-bottom: 12px;
+            font-size: 22px;
+            padding: 10px 15px;
+        }
+
+        /*Contactos*/
+
+        .row {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .contacto-info {
+            width: 60%;
+        }
+
+        .contacto-form {
+            width: auto;
+        }
+
+        /* Footer */
+
+        .footer1 {
+            padding: 20px 0;
+        }
+
+        .footer-row {
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .footer-link {
+            width: 100%;
+            margin-bottom: 30px;
+
+        }
+
+        .footer-link h4 {
+            font-family: "Protest Strike", sans-serif;
+            font-size: 22px;
+            color: #6200ff;
+            margin-bottom: 10px;
+            font-weight: 500;
+            border-bottom: 2 solid #ffffff;
+            padding-bottom: 0;
+            text-transform: none;
+        }
+
+        .footer-link ul li p {
+            font-size: 19px;
+        }
+
+        .footer-link ul li a {
+            font-size: 19px;
+        }
+
+        .footer-link ul li a:hover {
+            color: #6200ff;
+            padding-left: 6px;
+        }
+
+        .social-link {
+            padding: 0 0 20px 0;
+        }
+
+        .social-link img {
+            display: inline-block;
+            width: 55px;
+            height: auto;
+            margin: 0;
+            text-align: center;
+            border-radius: 50%;
+            color: aliceblue;
+            padding: 0;
+        }
+
+        .social-link a:hover {
+            background-color: #6200ff;
+        }
+
+
+        .newsletter .titulo {
+            font-family: "Protest Strike", sans-serif;
+            padding-bottom: 10px;
+            color: #6200ff;
+            font-size: 22px;
+            text-align: left;
+        }
+
+        .newsletter p {
+            color: white;
+            font-size: 17px;
+            font-family: "Bebas Neue", sans-serif;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+
+        div.newsletter-caja {
+            gap: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .newsletter-caja input {
+            width: 100%;
+            height: 50px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: gainsboro;
+        }
+
+        .newsletter-caja input:focus {
+            outline: 2px solid #6200ff;
+        }
+
+        .newsletter-caja button {
+            padding: 10px 10px;
+            background-color: #6200ff;
+            border-radius: 10px;
+            width: 100%;
+            height: 50px;
+            font-size: 22px;
+        }
+
+        ::placeholder {
+            font-size: 17px;
+        }
+
+        .footer-2 {
+            display: flex;
+            padding: 15px 0 0 0;
+            flex-direction: column;
+            gap: 20px;
+
+            & p,
+            a {
+                color: white;
+                font-size: 15px;
+                font-family: "Bebas Neue", sans-serif;
+                text-decoration: none;
+                text-align: center;
+
+            }
+
         }
     }
 
-}
+    @media (max-width: 426px) {
 
-.newsletter h5 {
-    padding-bottom: 30px;
-}
+        /* Header & nav */
+        .logo img {
+            width: auto;
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
 
-.newsletter-caja {
-    display: flex;
-    padding-top: 50px;
+        header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 70px;
+            padding: 0 40px;
+            background-color: black;
+        }
 
-}
+        .hamburguesa {
+            display: block;
+            cursor: pointer;
+        }
 
-.newsletter-caja input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 0;
-    border: none;
-    background-color: var(--colorgrisfondo);
-}
+        .hamburguesa .line {
+            width: 28px;
+            height: 4px;
+            background: #6200ff;
+            margin: 6px 0 6px 3cm;
+            border-radius: 2px;
+        }
 
-.newsletter-caja input:focus {
-    outline: 1px solid #6200ff;
+        .nav-bar {
+            width: 100%;
+            height: 0;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: #6200ff;
+            transition: 1s;
+            overflow: hidden;
+        }
 
-}
+        .nav-bar.active {
+            height: 400px;
+            width: 100%;
+        }
 
-.newsletter-caja button {
-    background-color: var(--colorblanco);
-    border-radius: 0;
+        .nav-bar.active a {
+            font-weight: normal;
+        }
 
-    & img {
-        width: 25px;
-        height: auto;
+        .nav-bar.active a:hover {
+            font-weight: normal;
+            color: white;
+        }
 
+        .nav-bar ul {
+            display: block;
+            width: fit-content;
+            margin: 80px auto 0 auto;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .nav-bar.active ul {
+            opacity: 1;
+        }
+
+        .nav-bar ul li a {
+            font-weight: normal;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        /*Contactos*/
+
+        .contactos-gamer {
+            margin-top: 17%;
+        }
+
+        .contactos-gamer h2 {
+            font-size: 26px;
+            font-weight: normal;
+        }
+
+        .contacto-info {
+            width: 100%;
+        }
+
+        .contacto p {
+            font-size: 14px;
+        }
+
+        .contacto-info-text p {
+            font-size: 14px;
+        }
+
+        .contacto-info-text h4 {
+            font-size: 22px;
+        }
+
+        .contacto-info-text a {
+            font-size: 14px;
+        }
+
+        .contacto-info-item .contacto-info-icon {
+            height: 50px;
+            width: 50px;
+        }
+
+        .contacto-info-item .contacto-info-icon i {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 52px;
+        }
+
+        .contacto-form h2 {
+            font-size: 23px;
+        }
+
+        /* Footer */
+
+        .footer1 {
+            padding: 20px 0;
+        }
+
+        .footer-row {
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .footer-link {
+            width: 100%;
+            margin-bottom: 30px;
+
+        }
+
+        .footer-link h4 {
+            font-family: "Protest Strike", sans-serif;
+            font-size: 26px;
+            color: #6200ff;
+            margin-bottom: 10px;
+            font-weight: 500;
+            border-bottom: 2 solid #ffffff;
+            padding-bottom: 0;
+            text-transform: none;
+        }
+
+        .footer-link ul li p {
+            font-size: 22px;
+        }
+
+        .footer-link ul li a {
+            font-size: 22px;
+        }
+
+        .footer-link ul li a:hover {
+            color: #6200ff;
+            padding-left: 6px;
+        }
+
+        .social-link {
+            padding: 0 0 20px 0;
+        }
+
+        .social-link img {
+            display: inline-block;
+            width: 55px;
+            height: auto;
+            margin: 0;
+            text-align: center;
+            border-radius: 50%;
+            color: aliceblue;
+            padding: 0;
+        }
+
+        .social-link a:hover {
+            background-color: #6200ff;
+        }
+
+
+        .newsletter .titulo {
+            font-family: "Protest Strike", sans-serif;
+            padding-bottom: 10px;
+            color: #6200ff;
+            font-size: 26px;
+            text-align: left;
+        }
+
+        .newsletter p {
+            color: white;
+            font-size: 20px;
+            font-family: "Bebas Neue", sans-serif;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+
+        div.newsletter-caja {
+            gap: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .newsletter-caja input {
+            width: 100%;
+            height: 50px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: gainsboro;
+        }
+
+        .newsletter-caja input:focus {
+            outline: 2px solid #6200ff;
+        }
+
+        .newsletter-caja button {
+            padding: 10px 10px;
+            background-color: #6200ff;
+            border-radius: 10px;
+            width: 100%;
+            height: 50px;
+            font-size: 22px;
+        }
+
+        ::placeholder {
+            font-size: 17px;
+        }
+
+        .footer-2 {
+            display: flex;
+            padding: 15px 0 0 0;
+            flex-direction: column;
+            gap: 20px;
+
+            & p,
+            a {
+                color: white;
+                font-size: 15px;
+                font-family: "Bebas Neue", sans-serif;
+                text-decoration: none;
+                text-align: center;
+
+            }
+
+        }
     }
 }
